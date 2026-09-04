@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Photo Gallery</h1>
+    <p class="subtitle">Upload photos and view them below. Stored locally in this browser.</p>
+  </header>
+
+  <main>
+    <section id="drop-zone" class="drop-zone">
+      <input type="file" id="file-input" accept="image/*" multiple hidden>
+      <p><strong>Drag & drop photos here</strong> or click to choose files</p>
+    </section>
+
+    <section id="gallery" class="gallery" aria-live="polite"></section>
+
+    <p id="empty-state" class="empty-state">No photos yet. Add some above to get started.</p>
+  </main>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+    <button id="lightbox-delete" class="lightbox-delete">Delete</button>
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
